@@ -1,6 +1,15 @@
 console.log('main.js loaded')
 
-const template = document.getElementById('my-paragraph')
-const templateContent = template.content
+customElements.define(
+    "my-paragraph",
+    class extends HTMLElement {
+        constructor() {
+            super();
+            let template = document.getElementById("my-paragraph");
+            let templateContent = template.content;
 
-// document.body.appendChild(templateContent)
+            const shadowRoot = this.attachShadow({ mode: "open" });
+            shadowRoot.appendChild(templateContent.cloneNode(true));
+        }
+    },
+);

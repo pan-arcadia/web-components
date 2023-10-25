@@ -17,9 +17,18 @@
     <main>
         <h2>Let's check out the shadow DOM!</h2>
 
+        <!-- We define our custom element in JavaScript and it's displayed here. -->
+        <my-paragraph>
+            <p slot="my-text">Here is some different text.</p>
+        </my-paragraph>
+
+        <!-- Define our template. This is not rendered in the DOM. -->
         <template id="my-paragraph">
-            <p>My paragraph</p>
+            <p>
+                <slot name="my-text">Default text.</slot>
+            </p>
         </template>
+
     </main>
 
 </body>
