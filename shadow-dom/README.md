@@ -29,7 +29,7 @@ The shadow DOM specification enables us to manipulate the shadow DOM or our cust
 We are using the "host" element as the shadow host. We can call ```attachShadow``` on the host to create the shadow DOM, and can then add nodes to the shadow DOM.
 
 ```js
-const host = document.querySelector('host')
+const host = document.querySelector('#host')
 const shadow = host.attachShadow({ mode: 'open' })
 const span = document.createElement('span')
 span.textContent = `I'm in the shadow DOM`
