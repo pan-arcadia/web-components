@@ -1,5 +1,3 @@
-console.log('main.js loaded')
-
 customElements.define(
     "my-paragraph",
     class extends HTMLElement {

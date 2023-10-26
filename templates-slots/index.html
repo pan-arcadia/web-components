@@ -12,23 +12,24 @@
 <body>
     <header>
         <h1>Using Templates and Slots</h1>
+        <p>Web components</p>
     </header>
 
-    <main>
-        <h2>Let's check out the shadow DOM!</h2>
-
-        <!-- We define our custom element in JavaScript and it's displayed here. -->
-        <my-paragraph>
-            <p slot="my-text">Here is some different text.</p>
-        </my-paragraph>
-
-        <!-- Define our template. This is not rendered in the DOM. -->
+    <main class="main-content">
         <template id="my-paragraph">
+            <style>
+                p {
+                    color: white;
+                    background-color: #666;
+                    padding: 5px;
+                }
+            </style>
             <p>
-                <slot name="my-text">Default text.</slot>
+                <slot name="my-text">Default text goes here...</slot>
             </p>
-        </template>
-
+        </template>     
+        
+        <my-paragraph></my-paragraph>
     </main>
 
 </body>

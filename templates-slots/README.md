@@ -67,3 +67,12 @@ Here's an example:
     </p>
 </template>
 ```
+
+If the slot's content is not defined when the element is included in the markup, or if the browser does not support slots, then the fallback text is rendered.
+
+To define a slot's content, we include an HTML structure inside the template element with a ```slot``` attribute whose value is equal to the name of the slot we want to fill.
+
+Nodes that can be inserted into slots are known as *Slottable* nodes. When a node has been inserted in a slot, it is said to be slotted.
+
+An unnamed ```<slot>``` will be filled with all of the custom element's top-level child nodes that do not have the ```<slot>``` attribute. This includes text nodes.
+
